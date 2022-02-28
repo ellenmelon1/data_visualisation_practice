@@ -5,7 +5,8 @@ import Map from "./components/Map";
 import { useState } from "react";
 
 function App() {
-  const [userInput, setUserInput] = useState({});
+  const [userInput, setUserInput] = useState({startYear: 1600,
+  endYear: 2022});
 
   return (
     <div>

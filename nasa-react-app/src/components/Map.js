@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 function Map({ userInput }) {
   const { startYear, endYear } = userInput;
-
+  
   const [isLoading, setIsLoading] = useState(true);
   const [meteoriteData, setMeteoriteData] = useState([]);
 
@@ -16,7 +16,7 @@ function Map({ userInput }) {
         setMeteoriteData(response);
         setIsLoading(false);
       });
-  }, []);
+  }, [startYear, endYear]);
 
   const mapOutput = isLoading ? (
     <h3>LOADING</h3>
