@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import UserInput from "./components/UserInput";
+import Map from "./components/Map";
 import { useState } from "react";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div>
       <Header />
       <UserInput setUserInput={setUserInput} />
+      <Map userInput={userInput} />
     </div>
   );
 }

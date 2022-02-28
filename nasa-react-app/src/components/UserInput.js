@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const UserInput = ({setUserInput}) => {
+const UserInput = ({ setUserInput }) => {
   const year = new Date().getFullYear();
   const yearsArray = Array.from(new Array(100), (val, index) => year - index);
 
@@ -10,14 +10,14 @@ const UserInput = ({setUserInput}) => {
   useEffect(() => {
     const userInput = {
       startYear: startYear,
-      endYear: endYear
-    }
-    setUserInput(userInput)
-  }, [startYear, endYear])
+      endYear: endYear,
+    };
+    setUserInput(userInput);
+  }, [startYear, endYear]);
 
   return (
     <div>
-      <select onChange={event => setStartYear(event.target.value)}>
+      <select onChange={(event) => setStartYear(event.target.value)}>
         {yearsArray.map((year) => {
           return (
             <option key={year} value={year}>
@@ -27,7 +27,7 @@ const UserInput = ({setUserInput}) => {
         })}
         (
       </select>
-      <select onChange={event => setEndYear(event.target.value)}>
+      <select onChange={(event) => setEndYear(event.target.value)}>
         {yearsArray.map((year) => {
           return (
             <option key={year} value={year}>
