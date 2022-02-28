@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const UserInput = ({ setUserInput }) => {
   const year = new Date().getFullYear();
   const yearsArray = Array.from(new Array(100), (val, index) => year - index);
 
-  const [startYear, setStartYear] = useState();
-  const [endYear, setEndYear] = useState();
+  const [startYear, setStartYear] = useState(1600);
+  const [endYear, setEndYear] = useState(year);
 
   useEffect(() => {
     const userInput = {
