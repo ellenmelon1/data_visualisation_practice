@@ -27,20 +27,19 @@ function Map({ userInput }) {
       </Popup>
     </Marker>
   ) : (
-    meteoriteData.slice(0, 5).map((data) => {
-      {
-        console.log(typeof Number(data.reclong));
+    meteoriteData.map((data) => {
+      if (data.hasOwnProperty('reclong') && data.hasOwnProperty('reclat')) {
+        return (
+          <Marker
+            key={data.id}
+            position={[Number(data.reclat), Number(data.reclong)]}
+          >
+            <Popup>
+              {data.name} {data.recclass} {data.mass} <br />
+            </Popup>
+          </Marker>
+        );
       }
-      return (
-        <Marker
-          key={data.id}
-          position={[Number(data.reclong), Number(data.reclat)]}
-        >
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      );
     })
   );
 

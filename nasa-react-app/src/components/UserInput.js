@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Form from 'react-bootstrap/Form';
 
 const UserInput = ({ setUserInput }) => {
   const year = new Date().getFullYear();
@@ -17,7 +18,7 @@ const UserInput = ({ setUserInput }) => {
 
   return (
     <div>
-      <select onChange={(event) => setStartYear(event.target.value)}>
+      <Form.Select onChange={(event) => setStartYear(event.target.value)}>
         {yearsArray.map((year) => {
           return (
             <option key={year} value={year}>
@@ -26,8 +27,8 @@ const UserInput = ({ setUserInput }) => {
           );
         })}
         (
-      </select>
-      <select onChange={(event) => setEndYear(event.target.value)}>
+      </Form.Select>
+      <Form.Select onChange={(event) => setEndYear(event.target.value)}>
         {yearsArray.map((year) => {
           return (
             <option key={year} value={year}>
@@ -36,9 +37,9 @@ const UserInput = ({ setUserInput }) => {
           );
         })}
         (
-      </select>
+      </Form.Select>
 
-      <label>Input date range</label>
+      <Form.Label>Input date range</Form.Label>
     </div>
   );
 };
