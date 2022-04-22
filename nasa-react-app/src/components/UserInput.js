@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { useState, useEffect } from 'react';
+import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const UserInput = ({ setUserInput }) => {
   const year = new Date().getFullYear();
@@ -54,13 +54,11 @@ const UserInput = ({ setUserInput }) => {
             (
           </Form.Select>
         </Col>
-        <Col>
+        {/* <Col>
           <Form.Label className="m-3 ">Input date range</Form.Label>
-        </Col>
+        </Col> */}
       </Row>
-      <Row>
-        
-      </Row>
+      <Row></Row>
     </Container>
   );
 };

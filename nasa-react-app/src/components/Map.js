@@ -2,6 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import './Map.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/esm/Row';
+import Col from 'react-bootstrap/Col';
 
 function Map({ userInput }) {
   const { startYear, endYear } = userInput;
@@ -44,13 +47,19 @@ function Map({ userInput }) {
   );
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={2}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {mapOutput}
-    </MapContainer>
+    <Container>
+      <Col>
+        <Row>
+          <MapContainer center={[51.505, -0.09]} zoom={2}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {mapOutput}
+          </MapContainer>
+        </Row>
+      </Col>
+    </Container>
   );
 }
 

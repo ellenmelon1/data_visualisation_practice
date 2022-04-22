@@ -3,6 +3,7 @@ import Header from './components/Header';
 import UserInput from './components/UserInput';
 import Map from './components/Map';
 import { useState } from 'react';
+import media from './Media/luca-iaconelli-7i39CiYfEXA-unsplash.jpg';
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -12,9 +13,12 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <UserInput setUserInput={setUserInput} />
-      <Map userInput={userInput} />
+      <img alt="" className="app--img" src={media}></img>
+      <div className="app--content">
+        <Header />
+        <UserInput setUserInput={setUserInput} />
+        <Map userInput={userInput} />
+      </div>
     </div>
   );
 }
