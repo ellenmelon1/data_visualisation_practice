@@ -23,6 +23,7 @@ function App() {
         <UserInput setUserInput={setUserInput} />
         <Map userInput={userInput} />
       </div>
+      <div className="space"></div>
     </div>
   );
 }
