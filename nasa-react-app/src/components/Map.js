@@ -4,9 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import './Map.css';
 
-function Map({ userInput }) {
-  const { startYear, endYear } = userInput;
-
+function Map({ startYear, endYear }) {
   const [isLoading, setIsLoading] = useState(true);
   const [meteoriteData, setMeteoriteData] = useState([]);
 
@@ -19,7 +17,7 @@ function Map({ userInput }) {
         setMeteoriteData(response);
         setIsLoading(false);
       });
-  }, [startYear, endYear]);
+  }, [startYear, endYear, url]);
 
   const meteorite = new Icon({
     iconUrl: require('../Media/meteorite.png'),
@@ -43,6 +41,7 @@ function Map({ userInput }) {
           </Marker>
         );
       }
+      return null;
     })
   );
 

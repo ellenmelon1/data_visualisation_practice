@@ -16,9 +16,15 @@
 }
 
 .instructions {
-  color: pink;
+  color: orange;
   text-align: center;
   padding-bottom: 1.5%;
+  font-family: 'Distant Galaxy', sans-serif;
+}
+
+.default_inputs_label{
+  color:darkorange;
+  text-align: center;
   font-family: 'Distant Galaxy', sans-serif;
 }
 
