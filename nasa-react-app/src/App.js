@@ -14,6 +14,8 @@ function App() {
       <div className="all_content">
         <Header />
         <UserInput />
+        <p>.</p>
+        <p>.</p>
       </div>
     </div>
   );
