@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './components/Header';
-import UserInput from './components/UserInput';
+import Header from './Components/Header';
+import UserInput from './Components/UserInput';
 import media from './Media/Time Lapse Video Of Milky Way Galaxy.mp4';
 
 function App() {

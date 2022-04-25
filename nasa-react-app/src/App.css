@@ -12,20 +12,20 @@
   padding-top: 2%;
   padding-bottom: 1%;
   font-size: 3.75rem;
-  /* font-family: 'Distant Galaxy', sans-serif; */
+  font-family: "galaxy", sans-serif;
 }
 
 .instructions {
   color: orange;
   text-align: center;
   padding-bottom: 1.5%;
-  font-family: 'Distant Galaxy', sans-serif;
+  font-family: "galaxy", sans-serif;
 }
 
 .default_inputs_label{
   color:darkorange;
   text-align: center;
-  font-family: 'Distant Galaxy', sans-serif;
+  font-family: "galaxy", sans-serif;
 }
 
 .all_content{
