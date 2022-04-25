@@ -6,8 +6,9 @@ const Header = () => {
       <h1 className="header">NASA Meteorite Landings</h1>
       <h3 className="instructions">
         Filter the data to show the location of recorded meteorite landings on
-        the map:
+        the map
       </h3>
+      <p className="default_inputs_label">Default values are 2010 - 2012</p>
     </div>
   );
 };
