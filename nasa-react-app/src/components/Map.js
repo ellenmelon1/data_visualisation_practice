@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Icon } from 'leaflet';
 import './Map.css';
 
 function Map({ userInput }) {
@@ -20,12 +21,13 @@ function Map({ userInput }) {
       });
   }, [startYear, endYear]);
 
+  const meteorite = new Icon({
+    iconUrl: require('../Media/meteorite.png'),
+    iconSize: [25, 25],
+  });
+
   const mapOutput = isLoading ? (
-    <Marker position={[51.505, -0.09]}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker>
+    <Marker position={[51.505, -0.09]}></Marker>
   ) : (
     meteoriteData.map((data) => {
       if (data.hasOwnProperty('reclong') && data.hasOwnProperty('reclat')) {
@@ -33,6 +35,7 @@ function Map({ userInput }) {
           <Marker
             key={data.id}
             position={[Number(data.reclat), Number(data.reclong)]}
+            icon={meteorite}
           >
             <Popup>
               {data.name} {data.recclass} {data.mass} <br />

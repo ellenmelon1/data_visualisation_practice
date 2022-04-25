@@ -5,7 +5,7 @@ const UserInput = ({ setUserInput }) => {
   const year = new Date().getFullYear();
   const yearsArray = Array.from(new Array(100), (val, index) => year - index);
 
-  const [startYear, setStartYear] = useState(1600);
+  const [startYear, setStartYear] = useState(2010);
   const [endYear, setEndYear] = useState(year);
 
   useEffect(() => {
