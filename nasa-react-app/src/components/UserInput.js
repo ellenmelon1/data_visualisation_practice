@@ -42,8 +42,8 @@ const UserInput = () => {
         </Form.Select>
       </div>
       <Map startYear={startYear} endYear={endYear} />
-      <p>.</p>
-      <p>.</p>
+      <p></p>
+      <p></p>
     </div>
   );
 };
